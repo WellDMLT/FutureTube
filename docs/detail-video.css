@@ -27,8 +27,15 @@ nav>input{
     margin-right: 20px;
 }
 
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+
 .container{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
 .container .menu{
@@ -47,7 +54,7 @@ nav>input{
 
 .menu li{
     list-style: none;
-    padding-bottom: 12px 
+    padding-bottom: 12px;
 }
 
 .menu li:nth-child(5){
@@ -57,33 +64,48 @@ nav>input{
 }
 
 
-section{
-    width: 60%;
-    height: 80vh;
-    display: grid;
-    grid-template-columns: repeat(4,200px);
-    grid-template-rows: repeat(2,200px);
-    gap: 70px;
-    justify-content: center;
-    margin: 40px auto;
+.menu{
+    width: 15vw;
+    height: 100vh;
+    display: flex;
+    border-right: 1px solid black;
+    font-size: 20px;
+    padding-top: 12px;
+    grid-column:1 ;  
 }
 
-section>div{
-    width: 200px;
-    height: 200px;
-    border: 1px solid black;
-    justify-content: center;
+.video{
+    position: absolute;
+    top: 10vh;
+    right: 6vw;
 }
 
-section div video{
+.video>div{
+    width: 15vw;
+}
+
+
+.video video{
     width: 100%;
-    height: 80%;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
-section div > a{
-    color: black;
+.video a{
     text-decoration: none;
+    color: black;
 }
+
+section{
+    position: relative;
+    top: 5vh;
+    left: -5vw;
+}
+
+section video{
+    width: 100%;
+}
+
 
 
 footer{
@@ -91,6 +113,7 @@ footer{
     height: 50px;
     background-color: grey;
     position: relative;
+    top: 100px;
     bottom: 0;
 }
 
